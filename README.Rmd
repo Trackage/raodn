@@ -30,7 +30,20 @@ devtools::install_github("mdsumner/raodn")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example that gets some Argo data. 
+
+```{r}
+library(raodn)
+## read Argo data from AODN
+example("read_aodn_csv")
+library(ggplot2)
+
+ggplot(d[d$pres < 100, ]) + aes(longitude, latitude, col = psal) + geom_point()
+ggplot(d) + aes(psal, -pres, col = temp) + 
+ geom_point() + 
+  facet_wrap(~platform_number) 
+```
+
 
 ```{r example, eval = FALSE, include = FALSE}
 
