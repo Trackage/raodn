@@ -12,6 +12,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Travis-CI Build Status](https://travis-ci.org/mdsumner/raodn.svg?branch=master)](https://travis-ci.org/mdsumner/raodn)
+
+
 # raodn
 
 The goal of raodn is to ...
