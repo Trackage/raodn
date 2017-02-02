@@ -1,0 +1,12 @@
+Package: raodn
+Title: Read 'AODN' Data
+Version: 0.0.0.9000
+Authors@R: person("Michael D.","Sumner", role = c("aut", "cre"), email = "mdsumner@gmail.com")
+Description: What the package does (one paragraph).
+Depends: R (>= 3.3.2)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.0
+Suggests: ggplot2, testthat
+Imports: readr

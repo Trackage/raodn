@@ -1,0 +1,2 @@
+collection_url <- "http://geoserver-123.aodn.org.au/geoserver/ows?typeName=imos:argo_profile_data&SERVICE=WFS&outputFormat=csv&REQUEST=GetFeature&VERSION=1.0.0&CQL_FILTER=INTERSECTS(position%2CPOLYGON((142.822265625%20-43.814453125%2C142.822265625%20-42.759765625%2C150.380859375%20-42.759765625%2C150.380859375%20-43.814453125%2C142.822265625%20-43.814453125)))%20AND%20oxygen_sensor%20%3D%20true"
+devtools::use_data(collection_url)
