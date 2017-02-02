@@ -1,23 +1,21 @@
-# rimos
-get stuff from IMOS/AODN in R
 
-u <- "http://geoserver-123.aodn.org.au/geoserver/ows?typeName=imos:argo_profile_data&SERVICE=WFS&outputFormat=JSON&REQUEST=GetFeature&VERSION=1.0.0&CQL_FILTER=INTERSECTS(position%2CPOLYGON((147.07397460938%20-44.989990234375%2C147.07397460938%20-43.891357421875%2C148.15063476563%20-43.891357421875%2C148.15063476563%20-44.989990234375%2C147.07397460938%20-44.989990234375)))%20AND%20oxygen_sensor%20%3D%20true"
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+raodn
+=====
 
+The goal of raodn is to ...
 
-system(sprintf("ogrinfo '%s'", u))
+Installation
+------------
 
-library(rgdal)
-x <- readOGR(u, "OGRGeoJSON")
+You can install raodn from github with:
 
+``` r
+# install.packages("devtools")
+devtools::install_github("mdsumner/raodn")
+```
 
+Example
+-------
 
-u <- "http://geoserver-123.aodn.org.au/geoserver/ows?typeName=imos:argo_profile_data&SERVICE=WFS&outputFormat=csv&REQUEST=GetFeature&VERSION=1.0.0"
-u <- "http://geoserver-123.aodn.org.au/geoserver/ows?typeName=imos:argo_profile_data&SERVICE=WFS&outputFormat=csv&REQUEST=GetFeature&VERSION=1.0.0&CQL_FILTER=INTERSECTS(position%2CPOLYGON((147.07397460938%20-44.989990234375%2C147.07397460938%20-43.891357421875%2C148.15063476563%20-43.891357421875%2C148.15063476563%20-44.989990234375%2C147.07397460938%20-44.989990234375)))%20AND%20oxygen_sensor%20%3D%20true"
-
-u <- "http://geoserver-123.aodn.org.au/geoserver/ows?typeName=imos:argo_profile_data&SERVICE=WFS&outputFormat=JSON&REQUEST=GetFeature&VERSION=1.0.0&CQL_FILTER=INTERSECTS(position%2CPOLYGON((147.07397460938%20-44.989990234375%2C147.07397460938%20-43.891357421875%2C148.15063476563%20-43.891357421875%2C148.15063476563%20-44.989990234375%2C147.07397460938%20-44.989990234375)))%20AND%20oxygen_sensor%20%3D%20true"
-x <- readLines(u)
-
-library(rgdal)
-ogrListLayers(u)
-
-
+This is a basic example which shows you how to solve a common problem:
